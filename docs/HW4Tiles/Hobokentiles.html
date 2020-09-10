@@ -27,10 +27,10 @@
   <div id="map"></div>
   <script>
 
-      var SAM = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
-        maxZoom: 20,
-        attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-      }). addTo(map);
+var Basemap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	maxZoom: 19,
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+});
       var map = L.map('map').setView([40.74581954856849, -74.03273387770453], 14.0);
       var aerialPhoto = L.tileLayer('./HobokenTiles/{z}/{x}/{y}.png', {
         minZoom: 12,
@@ -40,7 +40,7 @@
       });
 
       var theTiles = {
-        "Stadia Basemap": SAM,
+        "Stadia Basemap": Basemap,
          "1976 aerial photo": aerialPhot
       }
 
