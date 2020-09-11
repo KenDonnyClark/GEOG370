@@ -45,7 +45,7 @@
       });
 
       var pierAIcon = L.icon({
-            iconUrl: 'https://www.hikingupward.com/NCSP/FlatTopTower/images/032815/P3280536.jpg',
+            iconUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Pier_A_Park_lawn_%26_gazebo_Hoboken_NJ.jpg/1200px-Pier_A_Park_lawn_%26_gazebo_Hoboken_NJ.jpg',
             iconSize: [60,50],
             popupAnchor: [0,0]
 
@@ -58,6 +58,9 @@
           pointToLayer: function (feature, latlng) { // b
           return L.marker(latlng, {icon: pierAIcon});}}) // c
           .bindPopup(pierAPopup) // d
+
+
+    
        var stevensUniIcon = L.icon({
             iconUrl: 'https://www.hikingupward.com/NCSP/FlatTopTower/images/032815/P3280536.jpg',
             iconSize: [60,50],
@@ -73,13 +76,28 @@
           return L.marker(latlng, {icon: stevensUniIcon});}}) // c
           .bindPopup(stevensUniPopup) // d
 
+        var mjFieldIcon = L.icon({
+            iconUrl: 'https://www.hikingupward.com/NCSP/FlatTopTower/images/032815/P3280536.jpg',
+            iconSize: [60,50],
+            popupAnchor: [0,0]
+
+
+        });
+
+        var mjFieldPopup =  "Flat Top mountain Fire Tower and lookout <br/><img src='https://www.blueridgehikingtrails.com/wp/wp-content/uploads/2015/05/Flat-Top-Tower-Moses-Cone-39.jpg'width='250px'/>";
+
+        var mjFielddisplay = L.geoJSON(mamaJohnsonfield, { // a
+          pointToLayer: function (feature, latlng) { // b
+          return L.marker(latlng, {icon: mjFieldIcon});}}) // c
+          .bindPopup(mjFieldPopup) // d
       var theTiles = {
         "Open Streetmap Basemap": Basemap,
          "1976 aerial photo": aerialPhoto,
       }
       var theVectors ={
         "Pier A Park": pierAdisplay,
-        "Stevens Univeristy": stevensUnidisplay
+        "Stevens Univeristy": stevensUnidisplay,
+        "Mama Johnson Baseball field": mjFielddisplay
       }
 
       L.control.layers(theTiles, theVectors).addTo(map);
