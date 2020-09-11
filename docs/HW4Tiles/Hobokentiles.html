@@ -45,20 +45,20 @@
       });
 
       var pierAparkicon = L.icon({
-            iconUrl: 'https://www.wikitree.com/photo.php/thumb/8/8f/Lindau-7-1.jpg/300px-Lindau-7-1.jpg',
-            iconSize: [60,50],
-            popupAnchor: [0,0]
+        iconUrl: 'https://www.wikitree.com/photo.php/thumb/8/8f/Lindau-7-1.jpg/300px-Lindau-7-1.jpg',
+        iconSize: [60,50],
+        popupAnchor: [0,0]
 
 
-        });
+      });
 
-        var pierAparkPopup =  "Grave of Moses Cone, textile company founder and philanthropist <br/><img src='https://streamingthruamerica.files.wordpress.com/2018/06/grave-site.jpg?w=1200'width='250px'/>";
+      var pierAparkPopup =  "Grave of Moses Cone, textile company founder and philanthropist <br/><img src='https://streamingthruamerica.files.wordpress.com/2018/06/grave-site.jpg?w=1200'width='250px'/>";
 
-         var pierAPark=L.geoJSON(pierApark, { // a
-         pointToLayer: function (feature, latlng) { // b
-         return L.marker(latlng, {icon: pierAparkicon});}}) // c
-        .bindPopup(pierAparkpopup) // d
-        .addTo(map); //
+      var pierAPark=L.geoJSON(pierApark, { // a
+      pointToLayer: function (feature, latlng) { // b
+      return L.marker(latlng, {icon: pierAparkicon});}}) // c
+      .bindPopup(pierAparkpopup) // d
+      .addTo(map); //
 
       var theTiles = {
         "Open Streetmap Basemap": Basemap,
