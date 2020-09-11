@@ -56,8 +56,8 @@
 
          var pierAPark=L.geoJSON(pierApark, { // a
          pointToLayer: function (feature, latlng) { // b
-         return L.marker(latlng, {icon: pierAicon});}}) // c
-        .bindPopup(pierApopup) // d
+         return L.marker(latlng, {icon: pierAparkicon});}}) // c
+        .bindPopup(pierAparkpopup) // d
         .addTo(map); //
 
       var theTiles = {
