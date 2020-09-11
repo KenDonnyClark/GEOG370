@@ -24,6 +24,8 @@
   </style>
 
 <script src = "./pierA.geojson"></script>
+<script src = "./stevensUni.geojson"></script>
+<script src = "./johnsonField.geojson"></script>
 </head>
 <body>
   <div id="map"></div>
@@ -56,13 +58,28 @@
           pointToLayer: function (feature, latlng) { // b
           return L.marker(latlng, {icon: pierAIcon});}}) // c
           .bindPopup(pierAPopup) // d
+       var stevensUniIcon = L.icon({
+            iconUrl: 'https://www.hikingupward.com/NCSP/FlatTopTower/images/032815/P3280536.jpg',
+            iconSize: [60,50],
+            popupAnchor: [0,0]
+
+
+        });
+
+        var stevensUniPopup =  "Flat Top mountain Fire Tower and lookout <br/><img src='https://www.blueridgehikingtrails.com/wp/wp-content/uploads/2015/05/Flat-Top-Tower-Moses-Cone-39.jpg'width='250px'/>";
+
+        var stevensUnidisplay = L.geoJSON(stevensUni, { // a
+          pointToLayer: function (feature, latlng) { // b
+          return L.marker(latlng, {icon: stevensUniIcon});}}) // c
+          .bindPopup(stevensUniPopup) // d
 
       var theTiles = {
         "Open Streetmap Basemap": Basemap,
          "1976 aerial photo": aerialPhoto,
       }
       var theVectors ={
-        "Pier A Park": pierAdisplay
+        "Pier A Park": pierAdisplay,
+        "Stevens Univeristy": stevensUnidisplay
       }
 
       L.control.layers(theTiles, theVectors).addTo(map);
