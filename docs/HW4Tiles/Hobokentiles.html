@@ -52,15 +52,15 @@
 
         var pierAPopup =  "Flat Top mountain Fire Tower and lookout <br/><img src='https://www.blueridgehikingtrails.com/wp/wp-content/uploads/2015/05/Flat-Top-Tower-Moses-Cone-39.jpg'width='250px'/>";
 
-         L.geoJSON(pierApark, { // a
-         pointToLayer: function (feature, latlng) { // b
-         return L.marker(latlng, {icon: pierAIcon});}}) // c
-        .bindPopup(pierAPopup) // d
-        .addTo(map); //
+        var poopUp = L.geoJSON(pierApark, { // a
+          pointToLayer: function (feature, latlng) { // b
+          return L.marker(latlng, {icon: pierAIcon});}}) // c
+          .bindPopup(pierAPopup) // d
 
       var theTiles = {
         "Open Streetmap Basemap": Basemap,
-         "1976 aerial photo": aerialPhoto
+         "1976 aerial photo": aerialPhoto,
+         "poop up": poopUp
       }
 
       L.control.layers(theTiles).addTo(map);
