@@ -60,10 +60,12 @@
       var theTiles = {
         "Open Streetmap Basemap": Basemap,
          "1976 aerial photo": aerialPhoto,
-         "Pier A Park": pierAdisplay
+      }
+      var theVectors ={
+        "Pier A Park": pierAdisplay
       }
 
-      L.control.layers(theTiles).addTo(map);
+      L.control.layers(theTiles, theVectors).addTo(map);
 
       
   </script>
